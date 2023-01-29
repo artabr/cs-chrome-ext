@@ -18,7 +18,8 @@
   "type": "module",
   "dependencies": {
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "split.js": "1.6.5"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.5.0",

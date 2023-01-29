@@ -3,3 +3,67 @@
 .content-view {
   font-size: 30px;
 }
+
+.PageLayout--primary .PageLayout__leftSidebar {
+  position: static !important;
+  margin-top: 3.5rem !important;
+  margin-left: 3.5rem !important;
+  overflow: hidden;
+}
+
+.PageLayout.PageLayout--primary {
+  display: flex;
+}
+
+.PageLayout--primary .PageLayout__content .PageLayout__body {
+  margin-left: 0 !important;
+}
+
+.ListRow-wrapper__content, .ListRow__content {
+  max-width: none !important;
+}
+
+.gutter {
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+  cursor: col-resize;
+}
+
+.PageLayout--primary .PageLayout__content .PageLayout__head {
+  position: sticky !important;
+  width: 100% !important;
+}
+
+.PageLayout--primary .PageLayout__content .PageLayout__body {
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.ListRow, .ListRow-wrapper {
+  width: 100% !important;
+}
+
+.ListRow-wrapper .ListRow {
+  width: 100% !important;
+}
+
+.Search.Search--medium {
+  width: 100% !important;
+}
+
+.Search--primary .Search__input {
+  height: 3.5rem !important;
+}
+
+.TabWrapper {
+  margin-right: 0.3rem;
+}
+
+.Table__body--scroll {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
