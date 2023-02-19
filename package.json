@@ -17,6 +17,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@extend-chrome/storage": "^1.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "split.js": "1.6.5"

@@ -3,6 +3,9 @@
   "name": "UI Enhancements for Contentstack",
   "version": "0.0.1",
   "description": "Adds useful enhancements to the Contentstack admin panel UI",
+  "permissions": [
+    "storage"
+  ],
   "options_page": "src/pages/options/index.html",
   "background": {
     "service_worker": "src/pages/background/index.js"
