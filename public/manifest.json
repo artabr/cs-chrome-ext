@@ -1,25 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "chrome-extension-boilerplate-react-vite",
+  "name": "UI Enhancements for Contentstack",
   "version": "0.0.1",
-  "description": "chrome extension boilerplate",
+  "description": "Adds useful enhancements to the Contentstack admin panel UI",
   "options_page": "src/pages/options/index.html",
   "background": {
     "service_worker": "src/pages/background/index.js"
   },
   "action": {
     "default_popup": "src/pages/popup/index.html",
-    "default_icon": "icon-34.png"
+    "default_icon": "ui-icon-32.png"
   },
   "icons": {
-    "128": "icon-128.png"
+    "128": "ui-icon-128.png"
   },
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*",
-        "<all_urls>"
+        "https://*.contentstack.com/*"
       ],
       "js": [
         "src/pages/content/index.js"
@@ -34,8 +32,8 @@
       "resources": [
         "assets/js/*.js",
         "assets/css/*.css",
-        "icon-128.png",
-        "icon-34.png"
+        "ui-icon-128.png",
+        "ui-icon-32.png"
       ],
       "matches": [
         "*://*/*"

@@ -5,17 +5,17 @@ import packageJson from "./package.json";
  */
 const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,
-  name: packageJson.name,
+  name: "UI Enhancements for Contentstack",
   version: packageJson.version,
   description: packageJson.description,
   options_page: "src/pages/options/index.html",
   background: { service_worker: "src/pages/background/index.js" },
   action: {
     default_popup: "src/pages/popup/index.html",
-    default_icon: "icon-34.png",
+    default_icon: "ui-icon-32.png",
   },
   icons: {
-    "128": "icon-128.png",
+    "128": "ui-icon-128.png",
   },
   content_scripts: [
     {
@@ -29,8 +29,8 @@ const manifest: chrome.runtime.ManifestV3 = {
       resources: [
         "assets/js/*.js",
         "assets/css/*.css",
-        "icon-128.png",
-        "icon-34.png",
+        "ui-icon-128.png",
+        "ui-icon-32.png",
       ],
       matches: ["*://*/*"],
     },

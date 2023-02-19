@@ -1,71 +1,47 @@
 <div align="center">
-<img src="public/icon-128.png" alt="logo"/>
-<h1> Chrome Extension Boilerplate with<br/>React + Vite + TypeScript</h1>
+<img src="public/ui-icon-128.png" alt="logo"/>
+<h1>UI Enhancements for Contentstack<br/>Chrome Extension</h1>
 
-![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![](https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![GitHub action badge](https://github.com/artabr/cs-chrome-ext/actions/workflows/build.yml/badge.svg)
 ![](https://badges.aleen42.com/src/vitejs.svg)
-![GitHub action badge](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite/actions/workflows/build.yml/badge.svg)
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/Jonghakseo/chrome-extension-boilerplate-react-viteFactions&count_bg=%23#222222&title_bg=%23#454545&title=😀&edge_flat=true" alt="hits"/>
-
-
-> This project is listed in the [Awesome Vite](https://github.com/vitejs/awesome-vite)
+![](https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 
 </div>
 
-## Table of Contents
+## Table of contents
 
 - [Intro](#intro)
 - [Features](#features)
-- [Installation](#installation)
-  - [Procedures](#procedures)
-- [Screenshots](#screenshots)
-  - [NewTab](#newtab)
-  - [Popup](#popup)  
+- [Development](#development)
 - [Documents](#documents)
+- [Thanks to](#thanks)
+- [Acknowledgements](#acknowledgements)
 
 
 ## Intro <a name="intro"></a>
-This boilerplate is made for creating chrome extensions using React and Typescript.
-> The focus was on improving the build speed and development experience with Vite.
+This project aims to enhance user experience of the administrative panel of the Contentstack headless CMS.
+
+> Please note, this projects is an unofficial extension.
 
 ## Features <a name="features"></a>
-- [React 18](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Vite](https://vitejs.dev/)
-- [SASS](https://sass-lang.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Chrome Extension Manifest Version 3](https://developer.chrome.com/docs/extensions/mv3/intro/)
-- HMR(incomplete)
-  - [Refresh PR](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite/pull/25)
+- Lets to configure the width of the left sidebar on the Entries tab
 
-## Installation <a name="installation"></a>
 
-### Procedures <a name="procedures"></a>
-1. Clone this repository.
-2. Change `name` and `description` in package.json => **Auto synchronize with manifest** 
-3. Run `yarn install` or `npm i` (check your node version >= 16.6, recommended >= 18)
-4. Run `yarn dev` or `npm run dev`
-5. Load Extension on Chrome
+## Development <a name="development"></a>
+
+1. Clone this repository
+2. Run `pnpm i` (check your node version >= 16.6, recommended >= 18)
+3. Run `pnpm run dev`
+4. Load Extension on Chrome
    1. Open - Chrome browser
    2. Access - chrome://extensions
    3. Check - Developer mode
-   4. Find - Load unpacked extension
+   4. Click - Load unpacked extension
    5. Select - `dist` folder in this project (after dev or build)
-6. If you want to build in production, Just run `yarn build` or `npm run build`.
+5. If you want to build for production, run `pnpm run build`
 
-## Screenshots <a name="screenshots"></a>
-
-### New Tab <a name="newtab"></a>
-
-<img width="971" src="https://user-images.githubusercontent.com/53500778/162631646-cd40976b-b737-43d0-8e6a-6ac090a2e2d4.png">
-
-### Popup <a name="popup"></a>
-
-<img width="314" alt="popup" src="https://user-images.githubusercontent.com/53500778/203561728-23517d46-12e3-4139-8a4f-e0b2f22a6ab3.png">
+> This project only supports [pnpm](https://pnpm.io/) package manager.
 
 
 ## Documents <a name="documents"></a>
@@ -75,15 +51,13 @@ This boilerplate is made for creating chrome extensions using React and Typescri
 - [Rollup-plugin-chrome-extension](https://www.extend-chrome.dev/rollup-plugin)
 
 
+## Thanks to <a name="thanks"></a>
 
----
-## Thanks To
+Special thanks to [JongHak Seo](https://github.com/Jonghakseo) for the amazing starting point for building Chrome extensions.
 
-| [Jetbrains](https://jb.gg/OpenSourceSupport)                                                                           | [Jackson Hong](https://www.linkedin.com/in/j-acks0n/)                                            |
-|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <img width="100" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo."> | <img width="100" src='https://avatars.githubusercontent.com/u/23139754?v=4' alt='Jackson Hong'/> |
+Please check out his work here [Chrome Extension Boilerplate with React + Vite + TypeScript](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite)
 
 
----
+## Acknowledgements <a name="acknowledgements"></a>
 
-[Jonghakseo](https://nookpi.tistory.com/)
+[Ui icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/ui)
