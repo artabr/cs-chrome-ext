@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@assets/img/logo.svg";
+import logo from "@assets/img/logo.png";
 import "@pages/popup/Popup.css";
 
 const Popup = () => {
@@ -8,16 +8,9 @@ const Popup = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/pages/popup/Popup.tsx</code> and save to reload.
+          This extension adds useful enhancements to the Contentstack admin
+          panel UI.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
       </header>
     </div>
   );
