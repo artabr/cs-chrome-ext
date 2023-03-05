@@ -20,6 +20,7 @@
     "@extend-chrome/storage": "^1.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "semantic-release": "^20.1.1",
     "split.js": "1.6.5"
   },
   "devDependencies": {
