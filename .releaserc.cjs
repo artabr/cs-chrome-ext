@@ -9,10 +9,20 @@ module.exports = {
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     [
+      '@semantic-release/npm',
+      {
+        'npmPublish': false
+      }
+    ],
+    [
       '@semantic-release/github',
       {
         assets: [
-          { path: 'dist/build.zip', label: 'Build' }
+          {
+            path: 'dist/build.zip',
+            name: 'ContentstackUIEnhancements-${nextRelease.gitTag}.zip',
+            label: 'Contentstack UI Enhancements (${nextRelease.gitTag}) extension distribution'
+          }
         ]
       }
     ]

@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://github.com/artabr/cs-chrome-ext.git"
   },
+  "private": "true",
   "scripts": {
     "build": "tsc --noEmit && vite build",
     "build:watch": "cross-env __DEV__=true vite build --watch",
