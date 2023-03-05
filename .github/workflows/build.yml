@@ -2,9 +2,13 @@ name: Build and release
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - beta
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - beta
 
 jobs:
   build:
@@ -47,7 +51,13 @@ jobs:
     - name: Build
       run: pnpm build
 
+    - name: Zip the build
+      run: |
+        cd ./dist
+        zip -r build.zip .
+
     - name: Create a release
+      if: github.event_name == 'push'
       run: npx semantic-release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
