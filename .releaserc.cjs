@@ -9,7 +9,7 @@ module.exports = {
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     ["@semantic-release/exec", {
-      "generateNotesCmd": "node utils/updateManifestVersion.js ${nextRelease.version} public/manifest.json" +
+      "generateNotesCmd": "node utils/updateManifestVersion.js ${nextRelease.version} public/manifest.json ; " +
                           "node utils/updateManifestVersion.js ${nextRelease.version} dist/manifest.json"
     }],
     [
