@@ -1,6 +1,6 @@
 {
   "name": "cs-chrome-ext",
-  "version": "0.0.1",
+  "version": "1.0.1-beta.3",
   "description": "Adds useful enhancements to the Contentstack admin panel UI",
   "license": "MIT",
   "repository": {
