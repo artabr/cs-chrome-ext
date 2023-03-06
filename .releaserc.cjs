@@ -8,10 +8,24 @@ module.exports = {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
+    ["@semantic-release/exec", {
+      "generateNotesCmd": "node utils/updateManifestVersion.js ${nextRelease.version} public/manifest.json" +
+                          "node utils/updateManifestVersion.js ${nextRelease.version} dist/manifest.json"
+    }],
     [
       '@semantic-release/npm',
       {
         'npmPublish': false
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "public/manifest.json",
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
     [
