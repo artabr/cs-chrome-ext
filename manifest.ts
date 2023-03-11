@@ -1,12 +1,23 @@
 import packageJson from "./package.json";
 
+const composeManifestVersion = (version) => {
+  const regex = /(\d+.\d+).(\d+)(\D*)(\d*)/;
+  const versionParts = version.match(regex);
+
+  const isPrerelease = !!versionParts[3];
+
+  return isPrerelease
+    ? `${versionParts[1]}.${Number(versionParts[2]) - 1}.${versionParts[4]}`
+    : version;
+};
+
 /**
  * After changing, please reload the extension at `chrome://extensions`
  */
 const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,
   name: "UI Enhancements for Contentstack",
-  version: packageJson.version,
+  version: composeManifestVersion(packageJson.version),
   description: packageJson.description,
   permissions: ["storage"],
   options_page: "src/pages/options/index.html",

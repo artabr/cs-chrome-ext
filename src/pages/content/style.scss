@@ -19,6 +19,10 @@
   margin-left: 0 !important;
 }
 
+.dashboard-cards-wrapper .PageLayout--primary .PageLayout__content .PageLayout__body {
+  margin-left: 3.5rem !important;
+}
+
 .ListRow-wrapper__content, .ListRow__content {
   max-width: none !important;
 }
@@ -41,6 +45,10 @@
 .PageLayout--primary .PageLayout__content .PageLayout__body {
   width: 100% !important;
   margin-top: 0 !important;
+}
+
+.dashboard-cards-wrapper .PageLayout--primary .PageLayout__content .PageLayout__body {
+  margin-top: 3.5rem !important;
 }
 
 .ListRow, .ListRow-wrapper {
