@@ -8,10 +8,14 @@ module.exports = {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
-    ["@semantic-release/exec", {
-      "generateNotesCmd": "node utils/updateManifestVersion.js ${nextRelease.version} public/manifest.json ; " +
-                          "node utils/updateManifestVersion.js ${nextRelease.version} dist/manifest.json"
-    }],
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "node utils/updateManifestVersion.js ${nextRelease.version} public/manifest.json ; " +
+                      "node utils/updateManifestVersion.js ${nextRelease.version} dist/manifest.json ; " +
+                      "cd dist ; zip -r build.zip ."
+      }
+    ],
     [
       '@semantic-release/npm',
       {

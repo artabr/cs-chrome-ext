@@ -51,11 +51,6 @@ jobs:
     - name: Build
       run: pnpm build
 
-    - name: Zip the build
-      run: |
-        cd ./dist
-        zip -r build.zip .
-
     - name: Create a release
       if: github.event_name == 'push'
       run: npx semantic-release
