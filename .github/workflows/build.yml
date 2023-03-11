@@ -59,7 +59,7 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Publish to Chrome Web Store
-      uses: trmcnvn/chrome-addon@v2
+      uses: artabr/chrome-webstore-gh-action@api-changes-update
       with:
         extension: ${{ env.CHROME_EXTENSION }}
         zip: dist/build.zip
