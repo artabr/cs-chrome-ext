@@ -64,6 +64,7 @@ jobs:
         path: dist/build.zip
 
   publish:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
