@@ -1,4 +1,4 @@
-name: Build and release
+name: Build, release and publish
 
 on:
   push:
@@ -12,7 +12,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -57,6 +56,21 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: dist/build.zip
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: dist
 
     - name: Publish to Chrome Web Store
       uses: artabr/chrome-webstore-gh-action@api-changes-update
