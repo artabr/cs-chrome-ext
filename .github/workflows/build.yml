@@ -74,13 +74,19 @@ jobs:
         name: dist
 
     - name: Unzip artifacts
-      run: unzip ./dist/build.zip
+      if: always()
+      run: unzip build.zip
+
+    - name: Unzip artifacts
+      if: always()
+      run: unzip dist.zip
 
     - name: Publish to Chrome Web Store
+      if: always()
       uses: artabr/chrome-webstore-gh-action@api-changes-update
       with:
         extension: ${{ env.CHROME_EXTENSION }}
-        zip: ./dist/build.zip
+        zip: build.zip
         client-id: ${{ secrets.CHROME_CLIENT_ID }}
         client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
         refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
