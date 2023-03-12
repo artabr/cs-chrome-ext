@@ -68,6 +68,9 @@ jobs:
 
     steps:
     - name: Download artifacts
+      run: unzip ./dist/build.zip
+
+    - name: Unzip artifacts
       uses: actions/download-artifact@v3
       with:
         name: dist
@@ -76,7 +79,7 @@ jobs:
       uses: artabr/chrome-webstore-gh-action@api-changes-update
       with:
         extension: ${{ env.CHROME_EXTENSION }}
-        zip: dist/build.zip
+        zip: ./dist/build.zip
         client-id: ${{ secrets.CHROME_CLIENT_ID }}
         client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
         refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
