@@ -69,12 +69,12 @@ jobs:
 
     steps:
     - name: Download artifacts
-      run: unzip ./dist/build.zip
-
-    - name: Unzip artifacts
       uses: actions/download-artifact@v3
       with:
         name: dist
+
+    - name: Unzip artifacts
+      run: unzip ./dist/build.zip
 
     - name: Publish to Chrome Web Store
       uses: artabr/chrome-webstore-gh-action@api-changes-update
